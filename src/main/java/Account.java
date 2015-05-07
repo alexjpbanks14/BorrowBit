@@ -2,6 +2,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import org.mindrot.jbcrypt.BCrypt;
+
 public class Account {
 	String name;
 	String email;
@@ -56,7 +58,7 @@ public class Account {
 			}
 		} catch (SQLException e1) {
 		}
-		String hashed = Hasher.Hash(p);
+		String hashed = BCrypt.hashpw(p, BCrypt.gensalt());
 		
 		statement = DataBase.getUpdate("INSERT INTO Users VALUES (?, ?, ?, ?);");
 		
@@ -120,9 +122,7 @@ public class Account {
 		} catch (SQLException e) {
 			return L_INVALID;
 		}
-		String hashed = Hasher.Hash(p);
-		System.out.println(hashed + ":" + password);
-		if(!hashed.equals(password)){
+		if(BCrypt.checkpw(p, password)){
 			return L_INVALID;
 		}
 		statement = DataBase.getUpdate("UPDATE Users SET sessid=? WHERE name=?");

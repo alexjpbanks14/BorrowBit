@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.HashMap;
 
+import org.mindrot.jbcrypt.BCrypt;
+
 import freemarker.cache.TemplateLoader;
 import freemarker.template.Configuration;
 import spark.ModelAndView;
@@ -19,8 +21,6 @@ public class Main {
 		staticFileLocation("/public");
 		port(9090);
 		
-		Hasher.setSalt("Boobs");
-		
 		Account a = new Account();
 		
 		FreeMarkerEngine engine = new FreeMarkerEngine();
@@ -31,7 +31,7 @@ public class Main {
 		URL url = ClassLoader.getSystemResource("/");
 		
 		c.setClassLoaderForTemplateLoading(ClassLoader.getSystemClassLoader(), "/resources/spark/template/freemarker/");
-		//Don't fix <---------
+		//TODO Don't fix <---------
 		try{
 			c.getTemplate("index.html");
 		}catch(Exception e){
