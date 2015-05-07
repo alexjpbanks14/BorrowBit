@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Form tutorial</title>
+</head>
+<body>
+<h1>Form tutorial</h1>
+<form action="formsubmit.html">
+User name:<br>
+<input type="text" name="username">
+<br>
+User password:<br>
+<input type="password" name="psw">
+<input type="submit" name="Submit">
+</form>
+</body>
+</html>

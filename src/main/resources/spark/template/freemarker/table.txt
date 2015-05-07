@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test database contents</title>
+<link rel="stylesheet" type="style/css" href="/style.css">
+</head>
+<body>
+<h1>Test table</h1>
+<table id="mainForm">
+${table}
+</table>
+</body>
+</html>

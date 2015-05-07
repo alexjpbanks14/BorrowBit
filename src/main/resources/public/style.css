@@ -1,0 +1,20 @@
+body{
+background: lightblue;
+}
+table{
+margin-left: auto;
+margin-right: auto;
+position:relative;
+background-color:red;
+border-collapse: collapse;
+border-style:solid;
+border-color:green;
+border-size:4px;
+width:50%;
+}
+td{
+border-style: solid;
+border-width: 2px;
+border-color:orange;
+border-collapse: collapse;
+}

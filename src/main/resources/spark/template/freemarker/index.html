@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BorrowBit - Home</title>
+		<style>
+		h1{
+			margin: 0px;
+			font-family: "Trebuchet MS";
+			font-size: 80px;
+			text-align: center;
+		}
+		.nav-table{
+			border-radius: 20px;
+			border-color: blue;
+			border-style: solid;
+			width: 100%;
+			height:40px;
+			border-width: 3px;
+		}
+		.nav-td{
+			text-align: center;
+			border-style: none;
+		}
+		div{
+			position: relative;
+			margin: 0 auto;
+			display: table;
+			padding: 10px;
+			text-align: center;
+		}
+		table{
+			position: relative;
+			border-radius: 15px;
+			border-color: blue;
+			border-width: 2px;
+			border-style: solid;
+			margin-left: auto;
+			margin-right: auto;
+			width: 80%;
+			height: auto;
+			border-collapse:separate;
+		}
+		.list{
+			position: relative;
+			border-radius: 15px;
+			border-color: blue;
+			border-width: 2px;
+			border-style: solid;
+			margin-left: auto;
+			margin-right: auto;
+			width: 80%;
+			height: auto;
+			border-collapse:separate;
+		}
+		td, th{
+			border-left: solid black 1px;
+			border-top: solid black 1px;
+			border-collapse: collapse;
+			text-align: center;
+		}
+		th {
+    		border-top: none;
+    	}
+    	td:first-child, th:first-child {
+     		border-left: none;
+		}
+		</style>
+	</head>
+	<body>
+		<h1>BorrowBit</h1>
+		<table class="nav-table">
+			<tr>
+				<td class="nav-td">
+				<a href="/index.html">Home</a>
+				</td>
+				<td class="nav-td">
+				<a href="/login.html">Login</a>
+				</td>
+				<td class="nav-td">
+				<a href="/create.html">Create</a>
+				</td>
+				<td class="nav-td">
+				<a href="/make.html">Make request</a>
+				</td>
+			</tr>
+		</table>
+		<p>Welcome ${UserName}!</p>
+		<a href="/login.html">Login here</a>
+		<a href="/create.html">Create account here</a>
+		<a href="/logoutd.html">Sign out here</a>
+		<table>
+			<thead>
+			<tr>
+				<th><p>Account requesting</p></th>
+				<th><p>Item requesting</p></th>
+				<th><p>Respond to request</p></th>
+			</td>
+			</thead>
+			${table}
+		</table>
+		<div>
+		${nav}
+		</div>
+	</body>
+</html>
